@@ -4,237 +4,238 @@
     color: tomato;
   }
 
-  /* CSS Variables */
-:root {
-  --primary: #ddd;
-  --dark: #333;
-  --light: #fff;
-  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
-}
-
-html {
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--dark);
-}
-
 body {
-  background: #ccc;
-  margin: 30px 50px;
-  line-height: 1.4;
-}
-
-.btn {
-  background: var(--dark);
-  color: var(--light);
-  padding: 0.6rem 1.3rem;
-  text-decoration: none;
-  border: 0;
-}
-
-img {
-  max-width: 100%;
-}
-
-.wrapper {
-  display: grid;
-  grid-gap: 20px;
+  /*background: url("http://flashwallpapers.com/wp-content/uploads/2015/09/digital-nature-1600x900.jpg") no-repeat;*/
+  background-size: auto;
 }
 
 .dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Navigation */
-.main-nav ul {
-  display: grid;
-  grid-gap: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  color: snow;
+  list-style-type: none;
+  margin: 0;
   padding: 0;
-  list-style: none;
-  grid-template-columns: repeat(4, 1fr);
+  background-color: rgb(30, 30, 30);
+  box-shadow: 5px 5px 5px 0px rgb(17, 17, 17);
 }
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
+
+.dropdown:hover {
+  background-color: rgb(17, 17, 17);
+  background-clip: border-box;
 }
-.navbar a {
-  float: left;
+
+.dropdown:hover .dropdownContent{
   display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-.main-nav a {
-  background: var(--primary);
-  display: block;
-  text-decoration: none;
-  padding: 0.8rem;
-  text-align: center;
-  color: var(--dark);
-  text-transform: uppercase;
-  font-size: 1.1rem;
-  box-shadow: var(--shadow);
+  visibility: visible;
 }
 
-.main-nav a:hover {
-  background: var(--dark);
-  color: var(--light);
+.dropdown p {
+  padding: 8px 16px;
 }
 
-/* Top Container */
-.top-container {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-areas:
-    'showcase showcase top-box-a'
-    'showcase showcase top-box-b';
+.dropdownContent {
+  list-style-type: none;
+  display: none;
+  visibility: hidden;
+  background-color: rgb(40, 40, 40);
+  box-shadow: 5px 5px 5px 0px rgb(17, 17, 17);
 }
 
-/* Showcase */
-.showcase {
-  grid-area: showcase;
-  min-height: 400px;
-  background: url(https://image.ibb.co/kYJK8x/showcase.jpg);
-  background-size: cover;
-  background-position: center;
-  padding: 3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-  box-shadow: var(--shadow);
+.dropdown p, .dropdownContent p {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
-.showcase h1 {
-  font-size: 4rem;
-  margin-bottom: 0;
-  color: var(--light);
+.dropdownContent p:hover{
+  background-color: rgb(17, 17, 17);
 }
 
-.showcase p {
-  font-size: 1.3rem;
-  margin-top: 0;
-  color: var(--light);
+h2 {
+  color: snow;
 }
 
-/* Top Box */
-.top-box {
-  background: var(--primary);
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  box-shadow: var(--shadow);
-  padding: 1.5rem;
+.backBtn {
+  position: relative;
+  color: black;
+  padding: 2px 15px 0 15px;
+  width: fit-content;
+  height: fit-content;
+  background-color: snow;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.top-box .price {
-  font-size: 2.5rem;
+/*
+accordion.js
+*/
+.contentBox {
+  background: rgb(56, 56, 56);
+  margin-right: 7%;
+  margin-left: 7%;
+  border-radius: 10px;
+  padding-right: 5%;
+  padding-left: 5%; 
+  padding-top: 5%;
+  padding-bottom: 100%;
 }
 
-.top-box-a {
-  grid-area: top-box-a;
-}
-
-.top-box-b {
-  grid-area: top-box-b;
-}
-
-/* Boxes */
-.boxes {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-
-.box {
-  background: var(--primary);
-  text-align: center;
-  padding: 1.5rem 2rem;
-  box-shadow: var(--shadow);
-}
-
-/* Info */
-.info {
-  background: var(--primary);
-  box-shadow: var(--shadow);
-  display: grid;
-  grid-gap: 30px;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 3rem;
-}
-
-/* Portfolio */
-.portfolio {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-
-.portfolio img {
+.tablv1 {
+  position: relative;
+  margin-bottom: 1px;
   width: 100%;
-  box-shadow: var(--shadow);
+  color: snow;
+  margin-bottom: 5px;
 }
 
-/* Footer */
-footer {
-  margin-top: 2rem;
-  background: var(--dark);
-  color: var(--light);
+.createSubBtn {
+  position: relative;
+  margin-bottom: 10px;
+  color: black;
+  width: 100%;
+  background-color: snow;
+  border-radius: 5px;
+}
+
+.tablv1 input, .tablv2 input, .createSubBtn input  {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.tablv1 label {
+  position: relative;
+  display: block;
+  padding: 0 0 0 1em;
+  background-color: rgb(30, 30, 30);
+  box-shadow: 3px 3px 3px 0px rgb(17, 17, 17);
+  font-weight: bold;
+  line-height: 3;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.createSubBtn label {
+  position: relative;
+  display: block;
+  padding: 0 0 0 1em;
+  box-shadow: 3px 3px 3px 0px rgb(17, 17, 17);
+  font-weight: bold;
+  line-height: 3;
+  cursor: pointer;
+}
+
+.tablv1 label:hover {
+  background-color: rgb(17, 17, 17);
+}
+
+.tablv1 .tablv2 {
+  max-height: 0;
+  overflow: hidden;
+  background-color: rgb(40, 40, 40);
+  box-shadow: 5px 5px 5px 0px rgb(17, 17, 17);
+  -webkit-transition: max-height .35s;
+  -o-transition: max-height .35s;
+  transition: max-height .35s;
+  margin-left: 1em;
+}
+
+.createSubBtn .content {
+  max-height: 0;
+  overflow: hidden;
+  width: 100%;
+  -webkit-transition: max-height .35s;
+  -o-transition: max-height .35s;
+  transition: max-height .35s;
+}
+
+.createSubBtn .content {
+  padding-left: 1em;
+}
+/* :checked */
+.tablv1 input:checked ~ .tablv2 {
+  max-height: 10em;
+}
+.tablv1 input:checked ~ label {
+  background-color: rgb(17, 17, 17);
+}
+
+.tablv2 input:checked ~ .table {
+  max-height: 10em;
+}
+.tablv2 input:checked ~ label {
+  background-color: rgb(17, 17, 17);
+}
+
+.createSubBtn input:checked ~ .content {
+  max-height: 10em;
+}
+.createSubBtn input:checked ~ label {
+  max-height: 10em;
+  box-shadow: unset;
+}
+/* Icon */
+.tablv1 label::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 3em;
+  height: 3em;
+  line-height: 3;
   text-align: center;
-  padding: 1rem;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
 }
 
-/* Media Queries */
-@media (max-width: 700px) {
-  .top {
-    grid-template-areas:
-      'showcase showcase'
-      'top-box-a top-box-b';
-  }
-
-  .showcase h1 {
-    font-size: 2.5rem;
-  }
-
-  .main-nav ul {
-    grid-template-columns: 1fr;
-  }
-
-  .info {
-    grid-template-columns: 1fr;
-  }
-
-  .info .btn {
-    display: block;
-    text-align: center;
-    margin: auto;
-  }
+.tablv1 input[type=checkbox] + label::after {
+  content: "\25BC";
 }
 
-@media (max-width: 500px) {
-  .top {
-    grid-template-areas:
-      'showcase'
-      'top-box-a'
-      'top-box-b';
-  }
+.tablv1 input[type=checkbox]:checked + label::after {
+  transform: rotateX(180deg);
 }
 
+/* table */
+.tablv1 .tablv2 .table{
+  max-height: 0;
+  overflow: hidden;
+  background-color: rgb(40, 40, 40);
+  -webkit-transition: max-height .35s;
+  -o-transition: max-height .35s;
+  transition: max-height .35s;
+}
+
+.tablv1 .tablv2 .table table{
+  margin: 1em;
+  width: 96%;
+  align-self: center;
+}
+
+.tablv1 .tablv2 .table table, .tablv1 .tablv2 .table th, .tablv1 .tablv2 .table td{
+  border: 1px solid snow;
+  border-collapse: collapse;
+}
+
+.tablv1 .tablv2 .table th, .tablv1 .tablv2 .table td {
+  padding: 5px;
+}
+
+.tablv1 .tablv2 .table td {
+  text-align: center;
+  
+}
+
+.tablv1 .tablv2 .table .namecol {
+  text-align: left;
+  width: 30%;
+}
+.tablv1 .tablv2 .table .nocol {
+  width: 10%;
+
+}
+
+.tablv1 .tablv2 .table img {
+  width: 1em;
+}
