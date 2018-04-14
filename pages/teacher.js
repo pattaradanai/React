@@ -5,7 +5,6 @@ import { compose, withState, withHandlers } from 'recompose'
 import { Field, reduxForm } from 'redux-form'
 import Link from 'next/link'
 
-import { teacher } from '../duck/app'
 import withApp from '../components/withApp'
 import css from '../style.css'
 import Head from 'next/head'
