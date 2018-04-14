@@ -17,7 +17,7 @@ const WrapperHome = styled.div`
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
   overflow: hidden;
 `
-const NevBar = styled.dev`
+const NevBar = styled.div`
     style="display:none;
     z-index:2;
     width:40%;
@@ -63,9 +63,10 @@ export default compose(
   ),
   withHandlers({
     onSubmit: props => value => {
-      login()
+      login(value)
     },
   }),
+ 
 )(props => {
   const { login, currentUser, onChangeUsername, onSubmit } = props
   return (
